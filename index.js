@@ -93,7 +93,17 @@ function filterByCountMinimum(animals, minimum) {
  * getMostCommonAnimal(animals); //> { kind: "Chicken", count: 11 }
  * getMostCommonAnimal([]); //> null // returns null if the input is empty
  */
-function getMostCommonAnimal(animals) {}
+function getMostCommonAnimal(animals) {
+  let highestCount = 0;
+  let mostCommon = null;
+  for (let animal of animals) {
+    if (animal.count > highestCount) {
+      highestCount = animal.count;
+      mostCommon = animal;
+    } 
+  }
+  return mostCommon;
+}
 
 // Do not change anything below this line.
 module.exports = {
