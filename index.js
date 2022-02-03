@@ -46,7 +46,13 @@ function getTotalCount(animals) {
  * getAllKinds(animals); //> ["Pig", "Cow", "Chicken", "Horse", "Dog", "Cat"]
  * getAllKinds([]); //> [] // returns empty array if input array is empty
  */
-function getAllKinds(animals) {}
+function getAllKinds(animals) {
+  let animalKinds = [];
+  for (let animal of animals) {
+    animalKinds.push(animal.kind);
+  }
+  return animalKinds;
+}
 
 /**
  * FUNCTION DESCRIPTION
